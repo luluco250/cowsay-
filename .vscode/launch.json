@@ -1,7 +1,4 @@
 {
-	// Use IntelliSense to learn about possible attributes.
-	// Hover to view descriptions of existing attributes.
-	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
 
@@ -10,13 +7,12 @@
 			"type": "cppdbg",
 			"request": "launch",
 			//"program": "${workspaceFolder}/bin_d/cowsay",
-			"program": "/usr/bin/fish",
-			"cwd": "${workspaceFolder}/bin_d",
+			"program": "/bin/bash",
+			"cwd": "${workspaceFolder}",
 			"args": [
-				//"asd[]asdasd[]asdasdasd[]asdasdasdasd"
-				//"$(fortune)",
-				"-c",
-				"set a (fortune); echo \\$a | ${workspaceFolder}/bin_d/cowsay; echo \\$a | cowsay -n"
+				//"-c",
+				//"text=$(fortune); ./cowsay $text; cowsay $text"
+				"test-fortune.sh"
 			],
 			"preLaunchTask": "Build Debug",
 			"MIMode": "gdb",
