@@ -44,9 +44,7 @@
             "label": "Run Debug",
             "type": "shell",
             "command": "fortune | ./cowsay",
-            "args": [
-                
-            ],
+            "args": [],
             "options": {
                 "cwd": "${workspaceFolder}/bin_d"
             },

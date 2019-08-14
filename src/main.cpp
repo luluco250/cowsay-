@@ -9,22 +9,27 @@
 using std::cout;
 using std::cin;
 
-template<class T>
-using Opt = std::optional<T>;
-
 int main(int argc, char** argv) {
 	auto args = handle_args(argc, argv);
-	Opt<std::string> message;
+
+	// Optional because we'll fill it inside the if.
+	std::optional<std::string> message;
 
 	if (args.has_message()) {
 		message = args.message;
 	} else {
+		/*
+			Read from stdin/pipe.
+		*/
 		std::ostringstream oss;
 		std::string str;
+
 		while (std::getline(cin, str))
-			oss << str;
+			oss << str << '\n';
 		
-		message = oss.str();
+		// Remove extra newline from loop.
+		str = oss.str();
+		message = str.substr(0, str.size() - 1);
 	}
 
 	cout << default_cow.say(*message);

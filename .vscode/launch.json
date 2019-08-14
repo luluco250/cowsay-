@@ -6,13 +6,10 @@
 			"name": "Debug",
 			"type": "cppdbg",
 			"request": "launch",
-			//"program": "${workspaceFolder}/bin_d/cowsay",
-			"program": "/bin/bash",
+			"program": "${workspaceFolder}/bin_d/cowsay",
 			"cwd": "${workspaceFolder}",
 			"args": [
-				//"-c",
-				//"text=$(fortune); ./cowsay $text; cowsay $text"
-				"test-fortune.sh"
+				"$(fortune)"
 			],
 			"preLaunchTask": "Build Debug",
 			"MIMode": "gdb",

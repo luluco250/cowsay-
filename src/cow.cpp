@@ -70,7 +70,7 @@ std::string Cow::say(const std::string_view raw_text) const {
 	const auto text = std::regex_replace(
 		std::string(raw_text),
 		regex_tab,
-		"     "
+		"        "
 	);
 
 	auto lines = split(text, '\n');
