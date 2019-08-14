@@ -1,0 +1,7 @@
+bin/
+bin_d/
+build/
+build_d/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json

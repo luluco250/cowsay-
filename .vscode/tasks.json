@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build_d"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run Release",
+            "type": "shell",
+            "command": "./cowsay",
+            "args": [
+                "asd[]asdasd[]asdasdasd[]asdasdasdasd"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/bin"
+            },
+            "group": "test",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run Debug",
+            "type": "shell",
+            "command": "fortune | ./cowsay",
+            "args": [
+                
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/bin_d"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
